@@ -1,0 +1,25 @@
+1. npx create-react-app basic-react
+// npx create-react-app " nama folder "
+// akan ada 3 folder
+// fokus ke public dan src
+// isi yang ada di index.html semuanya sudah di setting sama react
+// part " <title>React App</title> " bisa diganti judul "react app " => basic react
+// mau ganti judulnya bisa diganti . begitu dijalankan , namanya akan ganti
+=== fokus di src
+2. kalau mau gonta ganti , ada di app.js
+//react adalah komponen base
+3. app.js dijalankan lewat index.js
+//ibarat teori oop langsung pakai abstraction
+4. kalau mau gonta ganti , gantinya di app.js
+5. untuk menjalankan ketik "npm run start"
+lalu tunggu sampai basic reactnya muncul di browser
+6. lalu ubah yang ada di app.js di src
+//function App() {
+//  return (
+//   <div className="App">
+//      <h1>belajar react</h1> <== diganti dengan <h1>kata-kata</h1>
+//    </div>
+//  );
+//}
+7. hapuslogo.svg, reportWebVitals.js, setupTests.js, App.test.js
+8. bisa npm start ataupun npm run start untuk menampilkan app.js di localhost:3000
