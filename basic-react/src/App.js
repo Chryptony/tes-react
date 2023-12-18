@@ -5,7 +5,7 @@
 // column , button , dan sebagainya ditaruh di file terpisah dan ditaruh di komponen , jadi hitungan satu website banyak komponen
 // method post , edit , dan remove caranya sama cuma beda file
 //
-import React from 'react';
+import React, {useState} from 'react';
 import './components/Column';
 import './App.css';
 import images from './images/logo512.png'
@@ -18,20 +18,29 @@ import Profile from './components/Profile'
 // <hr/> untuk membagi div
 // penempatan tambahan harus menaruh div di dalam div
 function App() {
-  const users = [ 
+  const [users, setUsers] = useState([
     {
-      name: "tony",
-      hobby : "makan",
+      name: "koko",
+      hobby: "makan",
     },
     {
       name: "jeni",
-      hobby : "minum",
+      hobby: "minum",
     },
-    {
-      name : "tedi",
-      hobby: "main game"       
+    { 
+      name:"tedi",
+      hobby:"main game",
     }
-  ]
+  ]) 
+  // jika ingin membuat component, pastikan ada return
+
+  const NowLoading = () => {
+    return (
+      <div>
+        <h3>Loading data ....</h3>
+      </div>
+    )
+  }
   return (
     <div className="App">
       <h1>belajar react</h1>
@@ -56,17 +65,17 @@ function App() {
       </div>
       {/* <Profile name={"tony"} hobby={"makan"} ></Profile>
       <Profile name={"jeni"} hobby={"minum"} ></Profile>
-      <Profile name={"tedi"} hobby={"main game"} ></Profile> */}
+      <Profile name={"tedi"} hobby={"main game"} ></Profile>  */}
       {
-        users.map( user =>{
-          const { name, hobby} = user
-          return (
-            <Profile name = {name} hobby={hobby} />
+        users.map(user => {
+          const {name, hobby} = user
+          return(
+            <Profile name={name} hobby={hobby} />
           )
-        })
+         })
       }
+      <NowLoading/>
     </div>
-    
   );
 }
 
