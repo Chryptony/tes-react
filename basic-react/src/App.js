@@ -5,11 +5,15 @@
 // column , button , dan sebagainya ditaruh di file terpisah dan ditaruh di komponen , jadi hitungan satu website banyak komponen
 // method post , edit , dan remove caranya sama cuma beda file
 //
-import React, {useState} from 'react';
+import React from 'react';
 import './components/Column';
 import './App.css';
 import images from './images/logo512.png'
 import Profile from './components/Profile'
+import Navbar from './components/Navbar'
+import Column from './components/Column'
+import 'bootstrap/dist/css/bootstrap.css'
+
 // ingat buat import profile dan lainnya deengan tulisan ^^^
 // Lalu tulis <Profile></Profile> untuk menghubungkan profile ke app.js
 // yang profile , bisa diisi dengan <Profile name={"tony"} hobby={"makan"} ></Profile>
@@ -17,35 +21,14 @@ import Profile from './components/Profile'
 // kata image di kata setelah import adalah variabel . tanda " . " titik di "./images/logo512.png" mewakili src bukan basic react
 // <hr/> untuk membagi div
 // penempatan tambahan harus menaruh div di dalam div
-function App() {
-  const [users, setUsers] = useState([
-    {
-      name: "koko",
-      hobby: "makan",
-    },
-    {
-      name: "jeni",
-      hobby: "minum",
-    },
-    { 
-      name:"tedi",
-      hobby:"main game",
-    }
-  ]) 
-  // jika ingin membuat component, pastikan ada return
-
-  const NowLoading = () => {
-    return (
-      <div>
-        <h3>Loading data ....</h3>
-      </div>
-    )
-  }
+function App() { 
+  // 
   return (
-    <div className="App">
+    <div className="container-fluid">
+      <Navbar/>
       <h1>belajar react</h1>
       <p>bla bla bla</p>
-      <img src={images}/>
+      <img src={images} width="130" heigth="130" />
       <hr/>
       <div>
         <h3> hello koko</h3>
@@ -63,18 +46,7 @@ function App() {
         </svg>
       </a>
       </div>
-      {/* <Profile name={"tony"} hobby={"makan"} ></Profile>
-      <Profile name={"jeni"} hobby={"minum"} ></Profile>
-      <Profile name={"tedi"} hobby={"main game"} ></Profile>  */}
-      {
-        users.map(user => {
-          const {name, hobby} = user
-          return(
-            <Profile name={name} hobby={hobby} />
-          )
-         })
-      }
-      <NowLoading/>
+      <Profile/>
     </div>
   );
 }
