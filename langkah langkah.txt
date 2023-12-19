@@ -1,25 +1,38 @@
 1. npx create-react-app basic-react
-// npx create-react-app " nama folder "
-// akan ada 3 folder
-// fokus ke public dan src
-// isi yang ada di index.html semuanya sudah di setting sama react
-// part " <title>React App</title> " bisa diganti judul "react app " => basic react
-// mau ganti judulnya bisa diganti . begitu dijalankan , namanya akan ganti
-=== fokus di src
-2. kalau mau gonta ganti , ada di app.js
-//react adalah komponen base
-3. app.js dijalankan lewat index.js
-//ibarat teori oop langsung pakai abstraction
-4. kalau mau gonta ganti , gantinya di app.js
-5. untuk menjalankan ketik "npm run start"
-lalu tunggu sampai basic reactnya muncul di browser
-6. lalu ubah yang ada di app.js di src
-//function App() {
-//  return (
-//   <div className="App">
-//      <h1>belajar react</h1> <== diganti dengan <h1>kata-kata</h1>
-//    </div>
-//  );
-//}
-7. hapuslogo.svg, reportWebVitals.js, setupTests.js, App.test.js
-8. bisa npm start ataupun npm run start untuk menampilkan app.js di localhost:3000
+
+- npx create-react-app " nama folder "
+- fokus ke public dan src
+- react dijalankan dengan index.html
+- part " <title>React App</title> " bisa diganti judul "react app " => basic react
+- mau ganti judulnya bisa diganti . begitu dijalankan , namanya akan ganti
+- fokus di src
+- kalau mau gonta ganti , ada di app.js
+- react adalah komponen base
+- app.js dijalankan lewat index.js
+
+2. npm run start / npm start
+
+- npm run start untuk menjalankan ke localhost:3000
+- tampilan mau dibuat bagus , aturnya di css
+- react disebut SPA , single page application = cuma punya satu html
+- logo.svg , reportwebvital.js , setupTest.js, App.test.js dihapus aja
+- npm start bisa dirubah sendiri . gantinya di package.json . tambah di script
+"belajar" : "npm run belajar" di script bagian debug => "script"
+- <hr/> untuk membagi div yang baru
+
+----- tinggal kerjakan file app.js -----
+
+Installation
+Let’s get right into the code. To create a React app, make sure you have Node.js installed on your computer. If you haven’t built a React app before, you can check to see if you have Node.js installed by typing the following into your terminal:
+
+node -v
+If not, just go to the Node.js website to download the latest version.
+
+Once that’s done, we can get started with our React app by running this command:
+
+3. npm install react-router-dom
+First, we’ll build the navbar itself. To do that, we’ll create a file named navbar.js in src/components/navbar:
+
+4. npm install react-bootstrap bootstrap
+- Khusus react js , harus install ini 
+- source : https://react-bootstrap.netlify.app/
