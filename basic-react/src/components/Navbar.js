@@ -1,7 +1,10 @@
 import React from 'react';
 import {  Link } from "react-router-dom";
 import images from './images/jobside.png'
-const navbar= () =>{
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+
+const Navbar= () =>{
   return (
     <div className="container-fluid text-center header">
       <div className="container text-center">
@@ -14,6 +17,12 @@ const navbar= () =>{
               </div>
               <div class="col">
               <ul class="nav justify-content-end py-3">
+                <NavDropdown title="JASA" id="basic-nav-dropdown">
+                  <NavDropdown.Item href="#action/3.1">DESAIN GRAFIS</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.2">WEB DESIGN</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                </NavDropdown>
                 <li class="nav-item">
                   <a class="nav-link link-dark active" aria-current="page" href="#">Active</a>
                 </li>
@@ -34,4 +43,4 @@ const navbar= () =>{
         </div>  
   );
 }
-export default navbar
+export default Navbar
