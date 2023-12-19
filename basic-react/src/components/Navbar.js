@@ -1,25 +1,37 @@
 import React from 'react';
 import {  Link } from "react-router-dom";
+import images from './images/jobside.png'
 const navbar= () =>{
   return (
-    <div className="container-fluid header">
-      <div className="container text-end ">
-      <ul class="nav">
-       <li class="nav-item">
-         <a class="nav-link link-light active" aria-current="page" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-         <a class="nav-link link-light" href="Column">Link</a>
-       </li>
-        <li class="nav-item">
-          <a class="nav-link link-light" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link link-light disabled" aria-disabled="true">Disabled</a>
-       </li>
-     </ul>
-      </div>
-    </div>
+    <div className="container-fluid text-center header">
+      <div className="container text-center">
+        <div class="container text-center">
+          <div class="row align-items-start">
+            <div class="col">
+            <ul class="nav justify-content-start py-3">
+              <img src={images} width="130" heigth="100"/>
+            </ul>
+              </div>
+              <div class="col">
+              <ul class="nav justify-content-end py-3">
+                <li class="nav-item">
+                  <a class="nav-link link-dark active" aria-current="page" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-dark" href="Column">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-dark" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-dark disabled" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+              </div>
+             </div>
+            </div>
+      	  </div>
+        </div>  
   );
 }
 export default navbar

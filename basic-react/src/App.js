@@ -6,12 +6,12 @@
 // method post , edit , dan remove caranya sama cuma beda file
 //
 import React from 'react';
-import './components/Column';
+import './components/pages/Column';
 import './App.css';
-import images from './images/logo512.png'
+import images1 from './images/logo512.png'
 import Profile from './components/Profile'
 import Navbar from './components/Navbar'
-import Column from './components/Column'
+import Column from './components/pages/Column'
 import 'bootstrap/dist/css/bootstrap.css'
 
 // ingat buat import profile dan lainnya deengan tulisan ^^^
@@ -28,7 +28,7 @@ function App() {
       <Navbar/>
       <h1>belajar react</h1>
       <p>bla bla bla</p>
-      <img src={images} width="130" heigth="130" />
+      <img src={images1} width="130" heigth="130" />
       <hr/>
       <div>
         <h3> hello koko</h3>

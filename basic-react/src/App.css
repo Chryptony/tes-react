@@ -7,12 +7,12 @@ body {
 }
 
 .header {
-  background-color: #30336b;
-  color: white;
+  background-color: #dff9fb;
+  color: rgb(0, 0, 0);
 }
 
 .header-text {
-  color: #ccc;
+  color: #000000;
 }
 /* form tabel */
 table {
