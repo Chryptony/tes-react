@@ -1,0 +1,189 @@
+// instalasi
+
+1. mkdir client,server
+
+2. cd .\client\
+
+3. clear
+
+4. npx create-react-app .
+
+// jika error  ketik  npm uninstall -g create-react-app
+// npm i create-react-app -g
+// -g artinya dapat dipakai secara global dalam satu laptop
+// lalu ulang lagi dengan npx create-react-app
+
+5. cd .\server\
+
+// untuk membuat readme di server
+
+6. code README.md
+
+// dibuat readme agar bisa di save
+// kembali ke folder client
+
+7. npm i react-router-dom
+
+8. npm i bootstrap
+
+9. npm i axios
+
+10. npm i sweetalert2
+
+11. clear
+
+12. App.test.js , reportWebVitals.js , logo.svg , dan setupTests.js dihapus
+
+13. reportWebVitals(); dihapus , dan import reportWebVitals from './reportWebVitals'; dihapus
+
+14. cd .\src\
+
+15. mkdir components,axios,images,pages,helpers
+
+// fetching = axios
+// images buat gambar
+// helpers buat function tambahan
+
+16. clear
+
+17. cd ..
+
+__________________________________________
+// 
+// mulai masuk ke pembuatan website setelah instalasi
+
+- index.js masukin :
+1. import {BrowserRouter} from 'react-router-dom'
+2. <BrowserRouter></BrowserRouter>
+
+// <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+
+-  App.js masukin :
+
+1. import 'bootstrap/dist/css/bootstrap.css';
+2. import logo from './logo.svg'; diganti jadi import react from 'react';
+3. <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+    </div>
+    diganti jadi :
+    <div className="main-page container-fluid">
+      
+
+    </div>
+
+4. import {
+  NavbarMenu,
+  MainContent,
+  Banner,
+} from './components'
+
+5. rubah lagi yang nomor 3 jadi :
+<div className="main-page container-fluid">
+      <Banner></Banner>
+      <NavbarMenu></NavbarMenu>
+      <MainContent></MainContent>
+    </div>
+
+= folder components buat :
+1. buat file index.js, Banner.js , MainContent.js, NavbarMenu.js
+2. ketik rafce
+3. isi index.js
+
+-------------------------------------------
+- index.js
+
+1. import Banner from './Banner';
+2. import NavbarMenu from './NavbarMenu';
+3. import MainContent from './MainContent';
+4. export {
+    Banner, NavbarMenu, MainContent
+}
+------------------------------------------
+4. cd .\client\
+5. di cek dengan npm start
+
+- App.css
+1. semuanya isi file di hapus
+--- sudah tau caranya ---
+dan tambahin vvv 
+
+:root { 
+  font-size: 15px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+- Banner.js
+
+<div container="container text-center p-3">
+        <h1 className="logo-font">Dashboard class</h1>
+</div>
+
+- NavbarMenu.js
+
+yang navbar di bootstrap di paste ke NavbarMenu . tapi harus ketik <></> sebelum di div atau paste navbar bootstrap
+
+- MainContent.js
+
+1. import {
+    Routes,
+    Route
+} from 'react-router-dom'
+2. import { 
+    HomePage
+} from '../pages'
+3. tambah " <Routes>
+            <Route path="/" element={
+                <HomePage></HomePage>
+            }></Route>
+        </Routes> " di dalam div yang terletak setelah const
+
+= pages dibuatkan file :
+1. index.js
+2. HomePage.js
+3. Lecturer.js
+4. Student.js
+
+- index.js yang di folder pages
+
+1. import HomePage from './Homepage'
+2. import Lecturer from './Lecturer'
+3. import Student from './Student'
+4. export {
+    HomePage, Student , Lecturer
+}
+
+- MainContent.js tambahkan 
+
+import { 
+    HomePage,
+    Lecturer,
+    Student
+} from '../pages'
+
+dan 
+<Route path="/lecturers" element={
+                <Lecturer></Lecturer>
+            }></Route>
+
+- NavbarMenu linknya diisi 
+- NavbarMenu masukin import {Link} from 'react-router-dom'
+
+a href , yang a diganti Link , yang href diganti to
+
+= buka public lalu buka index.html
+setelah itu rubah nama title 
+
+cara membuat pages
+==========================================
+
+1. npm i react icons
+2. nmp i 
+// install lagi

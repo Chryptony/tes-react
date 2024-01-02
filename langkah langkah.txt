@@ -35,4 +35,10 @@ First, we’ll build the navbar itself. To do that, we’ll create a file named 
 
 4. npm install react-bootstrap bootstrap
 - Khusus react js , harus install ini 
-- source : https://react-bootstrap.netlify.app/
+- source : https://react-bootstrap.netlify.app/ , npm install react-icons --save
+
+= PENEMPATAN PAGE KE DUA , FILENYA HARUS BERADA DI SRC BUKAN DI DALAM COMPONENT ATAUPUN PAGES
+
+5. npm install react-scripts --save
+
+-jika kehapus ketik

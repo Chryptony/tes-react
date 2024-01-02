@@ -19,7 +19,7 @@ const Navbar= () =>{
               <ul class="nav justify-content-end py-3">
                 <NavDropdown title="JASA" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">DESAIN GRAFIS</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">WEB DESIGN</NavDropdown.Item>
+                  <NavDropdown.Item href="/webdesign">WEB DESIGN</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                 </NavDropdown>
