@@ -187,3 +187,26 @@ cara membuat pages
 1. npm i react icons
 2. nmp i 
 // install lagi
+
+===========================================
+Navbar , Link / a href , button ,
+
+- a href = a => Link , href => to ( ada di NavbarMenu)
+- button = ada di lecturers/ pages caranya :
+
+<button className="btn btn-sm btn-primary">
+        <span className="me-2">
+        <FiPlusCinpx sequelize-cli model:generate --name vehicle --attributes name:string,type:string,quantity:integerrcle></FiPlusCircle>
+        </span>
+        Add lecturerss
+      </button>
+
+============================================
+1. form add lecture ada di pages Lecturer.js
+
+==============================================
+untuk membuat database
+
+1. npx sequelize-cli db:create
+2. npx sequelize-cli model:generate --name API --attributes id:string,name:string,subject:string,age:string,action:integer
+3. npx sequelize-cli db:migrate

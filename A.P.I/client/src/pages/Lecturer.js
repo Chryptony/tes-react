@@ -16,7 +16,24 @@ const Lecturer = () => {
       </div>
       <div className="row my-3 text-center">
         <div className="col-9 mx-auto">
-          <div className="w-100"></div>
+          <div className="w-100">
+            <table className="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Subject</th>
+                  <th>Age</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div> 
     </div>
