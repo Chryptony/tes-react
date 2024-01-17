@@ -3,43 +3,27 @@ import {Link} from 'react-router-dom'
 const NavbarMenu = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container">
-          <Link className="navbar-brand" to="/">
-            Classroom
-          </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/lecturers">
-                  Lecturer
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/students">
-                  Student
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/logins">
-                  Log in
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <Link class="nav-link" to="/">Home</Link>
+        </li>
+        <li class="nav-item">
+          <Link class="nav-link" to="/lecturers">lecturer</Link>
+        </li>
+        <li class="nav-item">
+        <Link class="nav-link" to="/students">student</Link>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
     </>
   );
 }

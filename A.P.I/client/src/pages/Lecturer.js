@@ -19,7 +19,7 @@ const Lecturer = () => {
           <div className="w-100">
             <table className="table table-bordered">
               <thead>
-                <tr>
+                <tr className="table-primary">
                   <th>Id</th>
                   <th>Name</th>
                   <th>Subject</th>

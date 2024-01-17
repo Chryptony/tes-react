@@ -1,6 +1,9 @@
 import React from "react";
 import { Md4GPlusMobiledata } from "react-icons/md";
 
+// const = function , HomePage adalah object 
+// 
+
 const HomePage = () => {
   return (
     <div className="my-3">
@@ -58,7 +61,12 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <hr/>
+      <div className="text-center py-5">
+        <h1 className="fw-bold">Jasa Jobside</h1>
+      </div>
     </div>
+
   );
 };
 
