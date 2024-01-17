@@ -1,6 +1,6 @@
 import HomePage from './HomePage'
-import Student from './Student'
-import Lecturer from './Lecturer'
+import Student from './Students/Student'
+import Lecturer from './Lecturers/Lecturer'
 
 export {
     HomePage, Student , Lecturer

@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom'
 import { 
     HomePage,
-    Lecturer,
+    Lecturer, ListLecturers, CreateLecturer,
     Student
 } from '../pages'
 
@@ -18,9 +18,10 @@ const MainContent = () => {
             <Route path="/" element={
                 <HomePage></HomePage>
             }></Route>
-            <Route path="/lecturers" element={
-                <Lecturer></Lecturer>
-            }></Route>
+            <Route path="/lecturers" element={<Lecturer></Lecturer>}>
+                <Route path="" element={<ListLecturers></ListLecturers>}></Route>
+                <Route path="create" element={<CreateLecturer></CreateLecturer>}></Route>
+            </Route>
             <Route path="/students" element={
                 <Student></Student>
             }></Route>
