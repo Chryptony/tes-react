@@ -2,7 +2,11 @@ import React from 'react'
 
 const CreateLecturer = () => {
   return (
-    <div>CreateLecturer</div>
+    <>
+    <div className="row my-3">
+      CreateLecturer
+    </div>
+    </>
   )
 }
 

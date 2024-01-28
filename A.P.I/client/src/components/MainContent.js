@@ -15,14 +15,14 @@ const MainContent = () => {
         {/* <h3>dashboard class</h3> */}
 
         <Routes>
-            <Route path="/" element={
+            <Route path="" element={
                 <HomePage></HomePage>
             }></Route>
-            <Route path="/lecturers" element={<Lecturer></Lecturer>}>
+            <Route path="lecturers" element={<Lecturer></Lecturer>}>
                 <Route path="" element={<ListLecturers></ListLecturers>}></Route>
                 <Route path="create" element={<CreateLecturer></CreateLecturer>}></Route>
             </Route>
-            <Route path="/students" element={
+            <Route path="students" element={
                 <Student></Student>
             }></Route>
         </Routes>

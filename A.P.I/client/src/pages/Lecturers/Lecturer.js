@@ -1,6 +1,6 @@
 import React from 'react'
-import { FiPlusCircle } from "react-icons/fi";
-
+import { FiPlusCircle } from "react-icons/fi"
+import { Outlet } from 'react-router-dom'
 const Lecturer = () => {
   return (
     <div className="my-3">
@@ -14,9 +14,8 @@ const Lecturer = () => {
         Add lecturerss
       </button>
         </div>
-      
       </div>
-      
+      <Outlet></Outlet>
     </div>
   )
 }
