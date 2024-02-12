@@ -1,6 +1,10 @@
 import React, { useState, useEffect} from 'react'
 import { getLecturers } from '../../axios/lecturerAxios'
 import LoadingBar from '../../helpers/LoadingBar'
+import { FiPlusCircle } from "react-icons/fi"
+import {
+  Link
+} from'react-router-dom'
 
 const ListLecturers = () => { 
   const [Lecturers, setLecturers] = useState([])
@@ -13,6 +17,14 @@ const ListLecturers = () => {
     <>
     <div className="row my-3 text-center">
         <div className="col-9 mx-auto">
+          <div className="w-100">
+            <Link to="/lecturers/create" className="btn btn-sm btn-primary my-2">
+              <span className="me-2">
+                <FiPlusCircle></FiPlusCircle>
+              </span>
+              Add Lecturer
+            </Link>
+          </div>
           <div className="w-100">
             <table className="table table-bordered">
               <thead>
@@ -35,7 +47,10 @@ const ListLecturers = () => {
                       <td>{name}</td>
                       <td>{age} years old</td>
                       <td>{subject}</td>
-                      <td></td>
+                      <td>
+                        <Link to={`/lecturers/edit/${id}`} className="btn btn-sm btn-info">edit</Link>
+                        <button className="btn-btn-sm btn-danger">Delete</button>
+                      </td>
                     </tr> 
                   ) 
                 }) :<LoadingBar></LoadingBar>

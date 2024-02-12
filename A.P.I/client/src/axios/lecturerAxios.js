@@ -15,14 +15,30 @@ const getLecturers = async (cb) => {
         console.log(e)
     }
 }
-const addLecturer = () => {
-
+const addLecturer = async (lecturer) => {
+    try {
+        let result =  await axios({
+            method: 'POST',
+            url: URL + "/create",
+            data: lecturer
+        })
+        console.log(result.data)
+    } catch (e) {
+        console.log(e)
+    } //e disini adalah error bukan even
 }
 const editLecturer = () => {
     
 }
-const removeLecturer = () => {
-    
+const removeLecturer =  async (id) => {
+    try {
+        let result = await axios ({
+            method: 'DELETE',
+            url: URL + "/delete" + id
+        })
+    } catch (e) {
+        console.log (e)
+    }
 }
 const accountLecturer = () => {
     
