@@ -3,12 +3,12 @@ import { getLecturers, removeLecturer } from '../../axios/lecturerAxios'
 import LoadingBar from '../../helpers/LoadingBar'
 import { FiPlusCircle } from "react-icons/fi"
 import {
-  Link
+  Link, useNavigate
 } from'react-router-dom'
 
 const ListLecturers = () => { 
   const [Lecturers, setLecturers] = useState([])
-
+  const navigate = useNavigate()
   const [getLecturerTrigger, setGetLecturerTrigger] = useState(true)
   useEffect(() => {
     // callback untuk mengambil data lecturer dari folder axios
@@ -16,8 +16,8 @@ const ListLecturers = () => {
   }, [getLecturerTrigger])
   
   const deleteHandler = (id) => {
-    removeLecturer(id, (result) => setGetLecturerTrigger(!result))
-    getLecturers(result => setLecturers(result))
+    removeLecturer(id, )
+    navigate('/lecturers')
   }
 
   return (
