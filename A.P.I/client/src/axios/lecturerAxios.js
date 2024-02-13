@@ -22,7 +22,12 @@ const addLecturer = async (lecturer) => {
             url: URL + "/create",
             data: lecturer
         })
-        console.log(result.data)
+
+        Swal.fire(
+            'Add Lecturer',
+            'Lecturer has been added',
+            'success'
+        )
     } catch (e) {
         console.log(e)
     } //e disini adalah error bukan even
@@ -34,20 +39,43 @@ const editLecturer = async(id, lecturer) => {
             url: URL + '/update/'+ id,
             data: lecturer
         })
+
+        Swal.fire(
+            'Edit Lecturer' + id,
+            'Lecturer ' + id + 'has been ',
+            'success'
+        )
         console.log(result.data)
     } catch (e) {
         console.log (e)
     }
 }
-const removeLecturer =  async (id) => {
+const removeLecturer = async (id) => {
     try {
-        let result = await axios ({
-            method: 'DELETE',
-            url: URL + "/delete/" + id
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                let result = await axios({
+                    method: "DELETE",
+                    url: URL + '/delete/' + id
+                })
+
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
+            }
         })
-        console.log(result)
     } catch (e) {
-        console.log (e)
+        console.log(e)
     }
 }
 const accountLecturer = async (id,cb) => {

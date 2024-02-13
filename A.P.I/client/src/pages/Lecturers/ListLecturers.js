@@ -9,13 +9,14 @@ import {
 const ListLecturers = () => { 
   const [Lecturers, setLecturers] = useState([])
 
+  const [getLecturerTrigger, setGetLecturerTrigger] = useState(true)
   useEffect(() => {
     // callback untuk mengambil data lecturer dari folder axios
     getLecturers(result => console.log(result) )
-  }, [])
+  }, [getLecturerTrigger])
   
   const deleteHandler = (id) => {
-    removeLecturer(id)
+    removeLecturer(id, () => setGetLecturerTrigger(!getLecturerTrigger))
     getLecturers(result => setLecturers(result))
   }
 
