@@ -16,7 +16,7 @@ const ListLecturers = () => {
   }, [getLecturerTrigger])
   
   const deleteHandler = (id) => {
-    removeLecturer(id, () => setGetLecturerTrigger(!getLecturerTrigger))
+    removeLecturer(id, (result) => setGetLecturerTrigger(!result))
     getLecturers(result => setLecturers(result))
   }
 
