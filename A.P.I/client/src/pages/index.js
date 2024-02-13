@@ -7,9 +7,10 @@ import Student from './Students/Student'
 import Lecturer from './Lecturers/Lecturer'
 import ListLecturers from './Lecturers/ListLecturers'
 import CreateLecturer from './Lecturers/CreateLecturer'
+import EditLecturer from './Lecturers/EditLecturer'
 
 export {
     HomePage, 
     Student , 
-    Lecturer, ListLecturers, CreateLecturer
+    Lecturer, ListLecturers, CreateLecturer, EditLecturer,
 }

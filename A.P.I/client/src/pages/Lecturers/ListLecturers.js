@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react'
-import { getLecturers } from '../../axios/lecturerAxios'
+import { getLecturers, removeLecturer } from '../../axios/lecturerAxios'
 import LoadingBar from '../../helpers/LoadingBar'
 import { FiPlusCircle } from "react-icons/fi"
 import {
@@ -13,6 +13,12 @@ const ListLecturers = () => {
     // callback untuk mengambil data lecturer dari folder axios
     getLecturers(result => console.log(result) )
   }, [])
+  
+  const deleteHandler = (id) => {
+    removeLecturer(id)
+    getLecturers(result => setLecturers(result))
+  }
+
   return (
     <>
     <div className="row my-3 text-center">
@@ -49,7 +55,7 @@ const ListLecturers = () => {
                       <td>{subject}</td>
                       <td>
                         <Link to={`/lecturers/edit/${id}`} className="btn btn-sm btn-info">edit</Link>
-                        <button className="btn-btn-sm btn-danger">Delete</button>
+                        <button onClick={() => deleteHandler(+id)} className="btn btn-sm btn-danger">Delete</button>
                       </td>
                     </tr> 
                   ) 

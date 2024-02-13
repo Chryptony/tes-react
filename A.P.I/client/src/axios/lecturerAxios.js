@@ -27,21 +27,38 @@ const addLecturer = async (lecturer) => {
         console.log(e)
     } //e disini adalah error bukan even
 }
-const editLecturer = () => {
-    
-}
-const removeLecturer =  async (id) => {
+const editLecturer = async(id, lecturer) => {
     try {
         let result = await axios ({
-            method: 'DELETE',
-            url: URL + "/delete" + id
+            method:'PUT',
+            url: URL + '/update/'+ id,
+            data: lecturer
         })
     } catch (e) {
         console.log (e)
     }
 }
-const accountLecturer = () => {
-    
+const removeLecturer =  async (id) => {
+    try {
+        let result = await axios ({
+            method: 'DELETE',
+            url: URL + "/delete/" + id
+        })
+        console.log(result)
+    } catch (e) {
+        console.log (e)
+    }
+}
+const accountLecturer = async (id,cb) => {
+    try{
+        let result = await axios ({
+            method:"GET",
+            url: URL + '/information/'+id
+        })
+        cb(result.data)
+    } catch (e){
+        console.log (e)
+    }
 }
 
 export {
