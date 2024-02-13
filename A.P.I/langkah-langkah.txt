@@ -210,3 +210,49 @@ untuk membuat database
 1. npx sequelize-cli db:create
 2. npx sequelize-cli model:generate --name API --attributes id:string,name:string,subject:string,age:string,action:integer
 3. npx sequelize-cli db:migrate
+
+kalau di maincontent pakai /lecturers , di pages js gak masalah gak pakai / di /lecturers karena aman aman aja . tapi sebaiknya pakai aja
+<Profile > warna hijau adalah elemen
+props fungsinya untuk menyimpan data atau melempar data di element 
+
+ onChange={(e) => setForm ({ ...form,})} //(e)= even
+ setForm({...form,}) bertujuan untuk mengambil strapnya atau restnya
+
+cara membuat submit atau todo apps atau create di react js
+============================================
+import React,{useState} from 'react'
+
+const CreateLecturer = () => {
+  const [form, setForm] = useState({
+    name:"",
+    subject: "",
+    age:0,
+    action:""
+  })
+
+  const submitHandler = () => {
+    console.log(form)
+  }
+
+  return (
+    <>
+    <div className="row my-3">
+      <div className="w-100">
+        <h5>Create Lecturers</h5>
+      </div>
+      <div className="w-100">
+        <div className="mb-3">
+          <label>Name: </label>
+          <input 
+          onChange={(e) => setForm ({ ...form, name: e.target.value})} //(e)= even
+          type="text" 
+          className="form-control"></input>
+        </div>
+      </div>
+    </div>
+    </>
+  )
+}
+
+export default CreateLecturer
+===================================== 

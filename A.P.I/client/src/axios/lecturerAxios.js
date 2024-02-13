@@ -34,6 +34,7 @@ const editLecturer = async(id, lecturer) => {
             url: URL + '/update/'+ id,
             data: lecturer
         })
+        console.log(result.data)
     } catch (e) {
         console.log (e)
     }
